@@ -1,12 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical">
-    <ListView
-        android:id="@+id/lvMain"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        >
+        <Button
+            android:id="@+id/button"
+            android:onClick="ok"
+            android:text="ok"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:textSize="12sp"
+            android:layout_gravity="left"
+            android:padding="10dp"
+            android:background="#796767"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_gravity="right"
+            android:textSize="12sp"
+            android:padding="10dp"
+            android:background="#808080"/>
 
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/map_sbw"
+                android:id="@+id/imageView"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:scaleType="center" />
+        </HorizontalScrollView>
+    </ScrollView>
 </LinearLayout>
